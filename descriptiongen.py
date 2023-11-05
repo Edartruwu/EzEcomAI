@@ -7,7 +7,12 @@ def img_descriptiongen(image_path, prompt):
     "yorickvp/llava-13b:2facb4a474a0462c15041b78b1ad70952ea46b5ec6ad29583c0b29dbd4249591",
     input={
         "image": open(image_path, "rb"),
-        "prompt": f"Eres un experto en la creación de descripciones de productos optimizadas para SEO para ventas en comercio electrónico. {prompt}",
+        "prompt": (
+            "Eres un experto en la creación de descripciones de productos optimizadas para SEO para ventas en comercio electrónico. "
+            "Incluye palabras clave relevantes, resalta las características y ventajas del producto, define la audiencia objetivo y sugiere un llamado a la acción. "
+            "Adapta la descripción para que sea apropiada para cualquier tipo de producto y que sea convincente y concisa. "
+            f"{prompt}"
+             ),
         }
     )
     result = ""
