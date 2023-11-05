@@ -23,6 +23,11 @@ Install the requirements using pip:
 pip install -r requirements.txt
 
 ```
+Enter your replicate API key
+
+```bash
+export REPLICATE_API_TOKEN=<paste-your-token-here>
+```
 
 then put all your images on /images
 
