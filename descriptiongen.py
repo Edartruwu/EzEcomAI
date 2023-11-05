@@ -20,7 +20,7 @@ image_folder = "images"  # Ruta de la carpeta de imágenes
 output_data = {}  # Diccionario para almacenar los resultados
 
 for filename in os.listdir(image_folder):
-    if filename.endswith(".jpg"):  # Asegurarse de que solo procese archivos .jpg
+    if filename.endswith((".jpg", ".png")):
         image_path = os.path.join(image_folder, filename)
         description = img_descriptiongen(image_path, "Por favor, crea una descripción de producto convincente para este artículo.")
         output_data[filename] = description
@@ -28,3 +28,4 @@ for filename in os.listdir(image_folder):
 # Guardar los resultados en un archivo JSON
 with open("descriptions.json", "w") as json_file:
     json.dump(output_data, json_file, ensure_ascii=False, indent=4)
+    
